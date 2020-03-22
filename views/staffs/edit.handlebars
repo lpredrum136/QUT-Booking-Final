@@ -1,0 +1,35 @@
+<div class="card card-body">
+    <h3>Staff Information</h3>
+    <form action="/staff/edit/{{staff.id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <!--Override POST-->
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" required value="{{staff.name}}">
+            <!--You can add "required" for client side validation-->
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" required value="{{staff.email}}">
+            <!--You can add "required" for client side validation-->
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone number</label>
+            <input type="text" class="form-control" name="phone" required value="{{staff.phone}}">
+            <!--You can add "required" for client side validation-->
+        </div>
+        <div class="form-group">
+            <label for="availability">Availability</label>
+            <input type="text" class="form-control" name="availability">
+            <!--You can add "required" for client side validation-->
+        </div>
+        <div class="form-group">
+            <label for="services">Services</label>
+            <input type="text" class="form-control" name="services">
+            <!--You can add "required" for client side validation-->
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
